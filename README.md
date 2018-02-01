@@ -34,12 +34,12 @@ npm install
 Run the following commands in your CMD window
 
 ```
-node . [site url]
+node . [your domain]
 
 Example: "node . ixat.io"
 ```
 
-This will download all (most) required files and setup xatcore.php for usage with your domain.
+This will download all (most) required files and setup xatcore.php for usage with `your.domain`.
 
-Afterward, open a text editor such as NP++ or Sublime Text and search all files for "xat.com" and replace with `your domain`.
+Afterward, open a text editor such as NP++ or Sublime Text and search all files for "xat.com" and replace all with `your.domain`.
 Do the same for "xatech.com"
