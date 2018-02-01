@@ -2,7 +2,7 @@
   "name": "auto-xat-html5-chat-updater",
   "version": "1.0.0",
   "description": "Downloads required files for xat html5 client and applies some patches",
-  "main": "update.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
