@@ -33,9 +33,8 @@ Run the following commands in your CMD window
 
 ```
 node . [your domain]
-
-Example: "node . ixat.io"
 ```
+Example: ``node . ixat.io``
 
 This will download all (most) required files and setup xatcore.php for usage with `your.domain`.
 
