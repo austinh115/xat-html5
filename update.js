@@ -5,7 +5,6 @@ var Config = {};
 
 var http = require('https');
 var fs = require('fs');
-var exec = require("child_process").exec;
 
 if(process.argv.length >= 3)
 	SITE_URL = process.argv[2];
@@ -20,7 +19,6 @@ var download = function(url, dest, cb) {
 	});
 }
 
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var startBytes = 0;
 
 var request = require("request-promise");
