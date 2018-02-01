@@ -1,0 +1,16 @@
+{
+  "name": "auto-xat-html5-chat-updater",
+  "version": "1.0.0",
+  "description": "Downloads required files for xat html5 client and applies some patches",
+  "main": "update.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
