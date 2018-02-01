@@ -1,4 +1,5 @@
 var SITE_URL = "ixat.io";
+var SAVE_DIR = "./embed/";
 
 var Config = {};
 
@@ -7,7 +8,7 @@ var fs = require('fs');
 var exec = require("child_process").exec;
 
 var download = function(url, dest, cb) {
-	var file = fs.createWriteStream("embed/"+dest);
+	var file = fs.createWriteStream(SAVE_DIR + dest);
 	var request = http.get(url, function(response) {
 		response.pipe(file);
 		file.on('finish', function() {
@@ -100,7 +101,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 
 			file = file + res + "run()";
 
-			fs.writeFile("xatcore.php", file, function(err) {
+			fs.writeFile(SAVE_DIR + "xatcore.php", file, function(err) {
 				if (err) {
 					return console.log(err);
 				}
@@ -128,7 +129,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 
 		download("https://xat.com/site/" + box + "/" + file, file, function(r) {});
 
-		console.log("Progress: " + (i+1) + " / " + files.length + " (" + file + ") downloaded...");
+		console.log("Progress: " + (i + 1) + " / " + files.length + " (" + file + ") downloaded...");
 	}
 
 }).catch(function(err) {
