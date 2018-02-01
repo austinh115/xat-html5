@@ -1,4 +1,4 @@
-# Xat Updater for HTML5
+# Downloader for Xat HTML5
 
 An easy script to download required files for xat's HTML5 client and apply basic patches to xatcore.
 
