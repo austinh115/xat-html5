@@ -7,7 +7,7 @@ var fs = require('fs');
 var exec = require("child_process").exec;
 
 var download = function(url, dest, cb) {
-	var file = fs.createWriteStream(dest);
+	var file = fs.createWriteStream("embed/"+dest);
 	var request = http.get(url, function(response) {
 		response.pipe(file);
 		file.on('finish', function() {
