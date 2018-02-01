@@ -1,5 +1,5 @@
 var SITE_URL = "ixat.io";
-var SAVE_DIR = "./embed/";
+var SAVE_DIR = "./embed";
 
 var Config = {};
 
@@ -8,7 +8,7 @@ var fs = require('fs');
 var exec = require("child_process").exec;
 
 var download = function(url, dest, cb) {
-	var file = fs.createWriteStream(SAVE_DIR + dest);
+	var file = fs.createWriteStream(dest);
 	var request = http.get(url, function(response) {
 		response.pipe(file);
 		file.on('finish', function() {
@@ -101,7 +101,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 
 			file = file + res + "run()";
 
-			fs.writeFile(SAVE_DIR + "xatcore.php", file, function(err) {
+			fs.writeFile(SAVE_DIR + "/xatcore.php", file, function(err) {
 				if (err) {
 					return console.log(err);
 				}
@@ -121,7 +121,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 	for (var keys = Object.keys(files), i = 0; i < files.length; i++) {
 		var file = files[keys[i]];
 
-		var dir = "./" + file.split("/", (file.match(/\//g) || []).length).join("/");
+		var dir = SAVE_DIR + "/" + file.split("/", (file.match(/\//g) || []).length).join("/");
 
 		if (!fs.existsSync(dir)) {
 			fs.mkdirSync(dir);
