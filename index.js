@@ -130,9 +130,9 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 			fs.mkdirSync(dir);
 		}
 
-		download("https://xat.com/site/" + box + "/" + file, file, function(r) {});
+		download("https://xat.com/site/" + box + "/" + files[keys[i]], file, function(r) {});
 
-		console.log("Progress: " + (i + 1) + " / " + files.length + " (" + file + ") downloaded...");
+		console.log("Progress: " + (i + 1) + " / " + files.length + " (" + ("https://xat.com/site/" + box + "/" + files[keys[i]]) + ") downloaded...");
 	}
 
 }).catch(function(err) {
