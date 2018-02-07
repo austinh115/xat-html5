@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the script
 
 * [Source Files](https://github.com/austinh115/xat-html5/archive/master.zip) - The source
 * [Node.js](https://nodejs.org/en/) - To run the script
