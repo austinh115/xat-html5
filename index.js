@@ -6,7 +6,7 @@ var Config = {};
 var http = require('https');
 var fs = require('fs');
 
-if(process.argv.length >= 3)
+if (process.argv.length >= 3)
 	SITE_URL = process.argv[2];
 
 var download = function(url, dest, cb) {
@@ -110,7 +110,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 				console.log("xatcore.php saved");
 			});
 
-			fs.renameSync("xatcoremem.php", SAVE_DIR + "/xatcoremem.php"); 
+			fs.renameSync("xatcoremem.php", SAVE_DIR + "/xatcoremem.php");
 
 		}).catch(function(err) {
 			console.log('Error2 ' + err.statusCode);
@@ -119,7 +119,7 @@ request.get("https://xat.com/embed/chat.php#id=5&xc=3360&cn=793705656&gb=7tG4d&g
 
 	});
 
-	var files = ["activity.js", "embed.html", "www/createjs-2015.11.26.min.js", "www/actions.html", "www/actions.js", "www/chats.html", "www/chats.js", "www/classic.html", "www/friends.html", "www/friends.js", "www/groups.html", "www/groups.js", "www/hammer.js", "www/messages.html", "www/messages.js", "www/settings.html", "www/settings.js", "www/visitors.html", "www/visitors.js", "www/xat2.js", "www/XatBackground.jpg", "www/xat.css", "www/xat.js", "www/svg/8ball.svg", "www/svg/abchats.svg", "www/svg/abfriends.svg", "www/svg/abgroups.svg", "www/svg/ablogo.svg", "www/svg/abme.svg", "www/svg/abmore.svg", "www/svg/app.svg", "www/svg/biggrin.svg", "www/svg/bubble2.svg", "www/svg/confused.svg", "www/svg/cool.svg", "www/svg/crying.svg", "www/svg/deleteicon.svg", "www/svg/eek.svg", "www/svg/favorite.svg", "www/svg/frown.svg", "www/svg/getx.svg", "www/svg/groups.svg", "www/svg/helpicon.svg", "www/svg/mad.svg", "www/svg/more.svg", "www/svg/notfavorite.svg", "www/svg/off.svg", "www/svg/on.svg", "www/svg/redface.svg", "www/svg/selActions.svg", "www/svg/selFriends.svg", "www/svg/selGroups.svg", "www/svg/selPowers.svg", "www/svg/sleepy.svg", "www/svg/smile.svg", "www/svg/spkoff.svg", "www/svg/spk.svg", "www/svg/ss.svg", "www/svg/tongue.svg", "www/svg/wink.svg", "www/svg/xatsat.svg", "www/svg/xdelete.svg", "www/svg/x.svg"];
+	var files = ["activity.js", "embed.html", "www/createjs-2015.11.26.min.js", "www/actions.html", "www/actions.js", "www/chats.html", "www/chats.js", "www/classic.html", "www/friends.html", "www/friends.js", "www/groups.html", "www/groups.js", "www/hammer.js", "www/messages.html", "www/messages.js", "www/settings.html", "www/settings.js", "www/visitors.html", "www/visitors.js", "www/xat2.js", "www/XatBackground.jpg", "www/xat.css", "www/xat.js", "www/svg/8ball.svg", "www/svg/abchats.svg", "www/svg/abfriends.svg", "www/svg/abgroups.svg", "www/svg/ablogo.svg", "www/svg/abme.svg", "www/svg/abmore.svg", "www/svg/app.svg", "www/svg/biggrin.svg", "www/svg/bubble2.svg", "www/svg/confused.svg", "www/svg/cool.svg", "www/svg/crying.svg", "www/svg/deleteicon.svg", "www/svg/eek.svg", "www/svg/favorite.svg", "www/svg/frown.svg", "www/svg/getx.svg", "www/svg/groups.svg", "www/svg/helpicon.svg", "www/svg/mad.svg", "www/svg/more.svg", "www/svg/notfavorite.svg", "www/svg/off.svg", "www/svg/on.svg", "www/svg/redface.svg", "www/svg/selActions.svg", "www/svg/selFriends.svg", "www/svg/selGroups.svg", "www/svg/selPowers.svg", "www/svg/sleepy.svg", "www/svg/smile.svg", "www/svg/spkoff.svg", "www/svg/spk.svg", "www/svg/ss.svg", "www/svg/tongue.svg", "www/svg/wink.svg", "www/svg/xatsat.svg", "www/svg/xdelete.svg", "www/svg/x.svg", "www/svg/actEdit.svg", "www/svg/actPowers.svg", "www/svg/actStore.svg", "www/svg/actOK.svg", "www/svg/actBuyXats.svg", "www/svg/actLogin.svg", "www/svg/actSettings.svg", "www/svg/actDivorce.svg", "www/svg/actPrivateChat.svg", "www/svg/actPrivateMessage.svg", "www/svg/actIgnore.svg", "www/svg/actPowers.svg", "www/svg/actDivorce.svg", "www/svg/actAddAsFriend.svg", "www/svg/actTransfer.svg"];
 
 	for (var keys = Object.keys(files), i = 0; i < files.length; i++) {
 		var file = SAVE_DIR + "/" + files[keys[i]];
