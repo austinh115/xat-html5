@@ -12,10 +12,14 @@ if (process.argv.length >= 3)
 var download = function(url, dest, cb) {
 	var file = fs.createWriteStream(dest);
 	var request = http.get(url, function(response) {
-		response.pipe(file);
-		file.on('finish', function() {
-			file.close(cb);
-		});
+		if(response.statusCode != 404) {
+			response.pipe(file);
+			file.on('finish', function() {
+				file.close(cb);
+			});
+		} else {
+			console.log("File does not exist: " + url);
+		}
 	});
 }
 
